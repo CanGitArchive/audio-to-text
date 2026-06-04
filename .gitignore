@@ -1,0 +1,31 @@
+# Runtime state: recordings, transcripts, .env with API keys all live here
+DATA/
+
+# Local editor / agent config
+.claude/
+.vscode/
+*.code-workspace
+*.code-workspace.user
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# Build artifacts
+build/
+dist/
+*.spec
