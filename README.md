@@ -1,13 +1,13 @@
 # AudioToText
 
-Splits a multi-track audio recording (e.g. an OBS `.mkv` where each speaker has their own track) into clean, speaker-labeled transcripts. The interesting bit is a per-chunk speaker-resolution step that fixes a sharp diarization failure mode — [see CHANGELOG](CHANGELOG.md) for the algorithm.
+Splits a multi-track audio recording (e.g. an OBS `.mkv` where each speaker has their own track) into clean, speaker-labeled transcripts. The interesting bit is a per-chunk speaker-resolution step that fixes a sharp diarization failure mode, [see CHANGELOG](CHANGELOG.md) for the algorithm.
 
 ## Features
 
-- **Multi-track audio split** — ffmpeg pulls each track out into ~9-minute WAV chunks (auto-synthesizes a combined mix if the recording doesn't have one).
-- **Speaker-labeled timeline** — diarizer output on the combined track is stitched to "Speaker A" / "Speaker B" by cross-referencing the solo tracks per chunk.
-- **Cache-based reprocess** — re-render the output transcripts from cached responses without re-spending API credits.
-- **AI cleanup bundle** — one file (cleanup prompt + all transcripts) ready to paste into any LLM for final wording polish.
+- **Multi-track audio split**: ffmpeg pulls each track out into ~9-minute WAV chunks (auto-synthesizes a combined mix if the recording doesn't have one).
+- **Speaker-labeled timeline**: diarizer output on the combined track is stitched to "Speaker A" / "Speaker B" by cross-referencing the solo tracks per chunk.
+- **Cache-based reprocess**: re-render the output transcripts from cached responses without re-spending API credits.
+- **AI cleanup bundle**: one file (cleanup prompt + all transcripts) ready to paste into any LLM for final wording polish.
 
 ## Tech stack
 
