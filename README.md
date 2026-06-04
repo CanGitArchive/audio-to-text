@@ -2,6 +2,8 @@
 
 Splits a multi-track audio recording (e.g. an OBS `.mkv` where each speaker has their own track) into clean, speaker-labeled transcripts. The interesting bit is a per-chunk speaker-resolution step that fixes a sharp diarization failure mode, [see CHANGELOG](CHANGELOG.md) for the algorithm.
 
+<img width="1243" height="821" alt="Audio-To-Text" src="https://github.com/user-attachments/assets/86ffa044-9873-4d79-814f-dae6706a2dbb" />
+
 ## Features
 
 - **Multi-track audio split**: ffmpeg pulls each track out into ~9-minute WAV chunks (auto-synthesizes a combined mix if the recording doesn't have one).
