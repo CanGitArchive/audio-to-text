@@ -966,7 +966,7 @@ def build_session_outputs(
         role-forced speaker labels (set by resolve_speaker_tag during
         transcribe / reprocess).
       - Segments tagged with a MAIN role still hold raw diarization labels.
-    Mutates main segments in place (speaker → "Speaker A" / "Speaker B" / S* fallback).
+    Mutates main segments in place (speaker -> "Speaker A" / "Speaker B" / S* fallback).
     """
     transcripts_dir = session_dir / "transcripts"
     transcripts_dir.mkdir(parents=True, exist_ok=True)
@@ -1138,7 +1138,7 @@ def transcribe_extracted_tracks(
         track_segments: list[dict[str, Any]] = []
 
         for idx, chunk_path in enumerate(chunk_files, start=1):
-            log_fn(f"  → {label}: chunk {idx}/{len(chunk_files)}")
+            log_fn(f"  -> {label}: chunk {idx}/{len(chunk_files)}")
             transcript = transcribe_chunk(client, chunk_path, selected_model, selected_prompt)
             plain = to_plain_data(transcript)
             chunk_duration = get_duration_seconds(chunk_path, ffprobe_path) or 0.0

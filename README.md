@@ -24,7 +24,7 @@ python AudioToText.py
 
 Needs `ffmpeg`/`ffprobe` on `PATH` (or dropped into `DATA/TOOLS/`) and `DATA/AudioToText/.env` with `OPENAI_API_KEY=...`.
 
-GUI flow: scan a recording's audio tracks → assign roles (Combined / Mixed, Speaker A, Speaker B, Ignore) → extract → transcribe. "Run Full Pipeline" does both steps end-to-end; "Reprocess From Raw JSON" rebuilds outputs from cached responses.
+GUI flow: scan a recording's audio tracks -> assign roles (Combined / Mixed, Speaker A, Speaker B, Ignore) -> extract -> transcribe. "Run Full Pipeline" does both steps end-to-end; "Reprocess From Raw JSON" rebuilds outputs from cached responses.
 
 Outputs land under `DATA/AudioToText/Extracts/<session>/transcripts/`: per-speaker solos, a chronological combined timeline, and an AI cleanup bundle.
 

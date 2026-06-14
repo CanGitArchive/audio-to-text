@@ -22,7 +22,7 @@ score(label, solo) = |label_tokens ∩ solo_tokens| / min(|label_tokens|, |solo_
 
 Normalizing by the smaller of the two sets removes the asymmetric-size advantage. A label that contains most of a sparse solo's vocabulary is correctly identified as that speaker even when the other solo is much larger. Paired with a 1.3× margin gate and a 5-token minimum per label, labels that genuinely can't be resolved fall through to a session-stable `S1/S2/S3` numbering instead of being confidently mis-attributed.
 
-On a seed 49-minute two-participant recording: 454 raw diarizer fragments → 189 readable Speaker A / Speaker B turns after backchannel filtering and same-speaker turn merging, with only 1-2 short single-word responses left as `S*` for downstream review.
+On a seed 49-minute two-participant recording: 454 raw diarizer fragments -> 189 readable Speaker A / Speaker B turns after backchannel filtering and same-speaker turn merging, with only 1-2 short single-word responses left as `S*` for downstream review.
 
 ### Other notes worth keeping
 
